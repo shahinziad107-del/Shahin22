@@ -1,116 +1,137 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>صيانة وفحص المعدات الثقيلة - Al-Ghazlawi Workshop</title>
-  <style>
-    :root{--accent:#0b5cff;--bg:#f6f7fb;--card:#ffffff}
-    body{font-family: 'Segoe UI', Tahoma, Arial, sans-serif;background:var(--bg);margin:0;padding:0;color:#222}
-    header{background:linear-gradient(90deg, #072b61, #0b5cff);color:#fff;padding:28px 18px}
-    .container{max-width:1000px;margin:22px auto;padding:0 16px}
-    h1{margin:0 0 6px;font-size:28px}
-    p.lead{margin:0;color:rgba(255,255,255,0.9)}
-    .card{background:var(--card);border-radius:12px;box-shadow:0 6px 18px rgba(15,23,42,0.06);padding:18px;margin-bottom:18px}
-    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
-    @media(max-width:900px){.grid{grid-template-columns:1fr}}
-    table{width:100%;border-collapse:collapse}
-    th,td{padding:10px;border-bottom:1px solid #eee;text-align:right}
-    th{background:#fafafa}
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none}
-    footer{padding:16px;text-align:center;color:#666;font-size:14px}
-    .feature-list{list-style:none;padding:0;margin:0}
-    .feature-list li{padding:8px 0;border-bottom:1px dashed #eee}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ملخص مبادئ الطيران (الأيروديناميكا)</title> 
+    
+    <style>
+    :root{
+              --bg:#0f172a;        /* slate-900 */
+                    --card:#111827cc;    /* gray-900 with alpha *
+            --text:#e5e7eb;      /* gray-200 */
+            --muted:#94a3b8;     /* slate-400 */
+                      --accent:#38bdf8;    /* sky-400 */  
+                            --ring:#22d3ee55;    /* cyan-400 with alpha */
+    }
+    *{box-sizing:border-box}
+        body {
+            margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans Arabic"
+            Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            
+            background: radial-gradient(1200px 600px at 80% 0%, #0b1220 0%, var(--bg) 40%, #0b1220 100%);
+            color:var(--text)
+            
+            
+            line-height: 1.6;
+            min-height:100vh;
+            padding: 20px;
+            direction: rtl; /* لضمان الاتجاه من اليمين لليسار */
+            text-align: right;
+        }
+            header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter:saturate(1.2) blur(6px);
+      background: #0b1220cc;
+      border-bottom:1px solid #1f2937;
+    }
+     .container{max-width:1100px; margin:0 auto; padding:18px 16px}
+    .brand{display:flex; align-items:center; gap:10px}
+    .logo{
+      width:34px; height:34px; border-radius:10px; background:linear-gradient(135deg, var(--accent), #06b6d4);
+      box-shadow:0 6px 20px #22d3ee55 inset, 0 6px 20px #22d3ee55;
+    }
+    .brand h1{font-size:20px; margin:0}
+    nav a{color:var(--muted); text-decoration:none; margin-inline:8px}
+    nav a:hover{color:var(--text)}.hero{
+  text-align:center; padding:36px 16px 10px;
+}
+  .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        
+        .brand h1{font-size:20px; margin:0}
+    nav a{color:var(--muted); text-decoration:none; margin-inline:8px}
+    nav a:hover{color:var(--text)}.hero{
+  text-align:center; padding:36px 16px 10px;
+}
+        h1 {
+            color: #007bff;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        h2 {
+            color: #28a745;
+            margin-top: 25px;
+            border-bottom: 1px dashed #28a745;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: square;
+            padding-right: 20px;
+        }
+        li strong {
+            color: #0056b3;
+        }
+        .formula {
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+    </style>
 </head>
 <body>
-  <header>
     <div class="container">
-      <h1>  مركز الشاهين  لصيانه وفحص المعدات الثقيله و ترلات المرسيدس   </h1>
-      <p class="lead">متخصصون في صيانة المركبات الثقيلة، فحص التريلات (ترلات مرسيدس)، وصيانة رؤوس التريلا — خدمات بجودة صناعية ومواصفات السلامة.</p>
-    </div>
-  </header>  <main class="container">
-    <section class="card">
-      <h2>عن الورشة</h2>
-      <p>نقدم خدمات متكاملة لصيانة المعدات الثقيلة و جميع سيارات المرسيدس: محركات، جير بوكس،دوائر الهيدروليك، نظام تعليق، أنظمة هوائية، كهرباء شاحنة، وفحص شامل قبل الشراء. هدفنا إطالة عمر المعدات وتقليل الأعطال المفاجئة.</p>
-    </section><div class="grid">
-  <div>
-    <section class="card">
-      <h2>خدماتنا</h2>
-      <ul class="feature-list">
-        <li>فحص جميع سيارات المرسيدس و معدات الكتربلار مع عمل معايره و برمجه للكنترولات </li>
-        <li>صيانة دورية للمحرك، الجير، ونظام التبريد.</li>
-        <li>فحص وصيانة نظام الهواء والمكابح (القيادة الهوائية).</li>
-        <li>فحص الشاسيه والمحاور واستبدال أجزاء الإطار.</li>
-        <li>خدمات كهرباء ودوائر التحكم (ECU وأجهزة القياس).</li>
-        <li>تركيب وإصلاح أنظمة الرفع والهيدروليك للمقطورات.</li>
-      </ul>
-    </section>
+        <h1>ملخص مُصغر لمبادئ الطيران (الأيروديناميكا)</h1>
 
-    <section class="card">
-      <h2>فحص ترلات مرسيدس (ماذا نتحقق)</h2>
-      <ol>
-        <li>حالة المحرك: صوت، تسريب زيت، ضغط الضغط، وأعطال شفط الهواء.</li>
-        <li>حالة الجير (Gearbox): تسريب، سلاسة النقل، وحالة القابض.</li>
-        <li>المحاور والشاسيه: تشوه، صدأ عالي، لحامات ضعيفة.</li>
-        <li>نظام التعليق والفرامل: بطانات، تروس، خطوط هواء ومكونات ABS.</li>
-        <li>الوثائق وسجل الصيانة: مطابقة الكيلومترات، تاريخ الصيانة، وأي حوادث سابقة.</li>
-      </ol>
-    </section>
+        <h2>1. مبدأ الاستمرارية (Conservation of Mass)</h2> 
+          <a href= pf2.png>بعض الصور </a>
+        <ul>
+            <li><strong>الفكرة الأساسية:</strong> كمية تدفق الكتلة (Mass Flow) للهواء تظل <strong>ثابتة</strong> عبر أي مقطع من مسار التدفق.</li>
+            <li><strong>المعادلة البسيطة (للكثافة الثابتة):</strong></li>
+            <div class="formula">A × V = Constant</div>
+            <li><strong>المعنى العملي:</strong> إذا ضاقت <strong>المساحة (A)</strong> (مثل جزء من الماسورة أو فوق الجناح)، يجب أن <strong>تزيد السرعة (V)</strong> لتعويض النقص والحفاظ على نفس كمية الهواء المارة.</li>
+        </ul>
 
-    <section class="card">
-      <h2>أسئلة شائعة</h2>
-      <p><strong>هل تفحصون التريلا قبل الشراء؟</strong> نعم — نقدم تقرير مفصل يتضمن صور وملاحظات تقنية.</p>
-      <p><strong>كم تستغرق عملية الفحص؟</strong> عادة 1-2 ساعة للفحص الأساسي، وفحص أعمق عند الطلب.</p>
-    </section>
-  </div>
+        <h2>2. مبدأ برنولي (Bernoulli's Principle)</h2>
+           <a href= pf2.png>بعض الصور </a>
+        <ul>
+            <li><strong>الفكرة الأساسية:</strong> مجموع الضغط الساكن والطاقة الحركية للهواء يظل <strong>ثابتًا</strong>.</li>
+            <li><strong>المعنى العملي:</strong> هناك علاقة <strong>عكسية</strong> بين سرعة الهواء وضغطه.
+                <ul>
+                    <li>عندما <strong>تزيد سرعة</strong> الهواء، <strong>يقل ضغطه</strong>.</li>
+                    <li>عندما <strong>تقل سرعة</strong> الهواء، <strong>يزيد ضغطه</strong>.</li>
+                </ul>
+            </li>
+        </ul>
 
-  <aside>
-    <section class="card">
-      <h3>أسعار تقريبية في السوق المصري</h3>
-      <p>ملاحظة: الأسعار التالية تقريبية ومأخوذة من إعلانات مبوبة وأحصاءات سوق حتى الآن. الأسعار تختلف بحسب الحالة، الموديل، وسنة الصنع.</p>
-      <table>
-        <thead>
-          <tr><th>البند</th><th>نطاق السعر تقريبي (جنيه مصري)</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>مقطورة مرسيدس (مقطورة فقط)</td><td>~550,000 ج.م إلى 1,200,000 ج.م</td></tr>
-          <tr><td>تريلا مرسيدس كاملة (رأس وتريلا مستعملة)</td><td>~1,000,000 ج.م إلى 3,500,000 ج.م</td></tr>
-          <tr><td>رأس تريلا (مرسيدس Actros مستعمل)</td><td>~1,000,000 ج.م إلى 3,000,000 ج.م</td></tr>
-          <tr><td>فحص شامل قبل الشراء</td><td>من 2,000 ج.م إلى 6,000 ج.م (بحسب العمق)</td></tr>
-          <tr><td>صيانة دورية (فحص، زيوت، فلترات)</td><td>من 3,000 ج.م إلى 25,000 ج.م</td></tr>
-        </tbody>
-      </table>
-      <p class="muted">للحصول على عرض سعر دقيق، تواصل معنا واذكر الموديل وسنة الصنع وحالة المركبة.</p>
-      <a class="btn" href="#contact">اطلب فحص الآن</a>
-    </section>
-
-    <section class="card">
-      <h3>اتصل بنا</h3>
-      <p>هاتف: 01096409653
-      **01121774943<br>العنوان: محافظةالشرقيه_العاشر من رمضان_ منطقه 6 مليون )</p>
-      <p><small>نقبل التفاوض على أسعار الخدمات والقطع للرافعات والأسطول.</small></p>
-    </section>
-  </aside>
-</div>
-
-<section id="contact" class="card">
-  <h2>اطلب فحص أو خدمة</h2>
-  <form onsubmit="alert('تم إرسال الطلب (نموذج تجريبي)');return false;">
-    <label>الاسم الكامل<br><input required style="width:100%;padding:8px;margin-top:6px"/></label><br><br>
-    <label>الهاتف<br><input required style="width:100%;padding:8px;margin-top:6px"/></label><br><br>
-    <label>نوع المركبة/الموديل<br><input style="width:100%;padding:8px;margin-top:6px"/></label><br><br>
-    <label>ملاحظات<br><textarea style="width:100%;padding:8px;margin-top:6px" rows="4"></textarea></label><br><br>
-    <button class="btn" type="submit">أرسل الطلب</button>
-    <label><a href="https://wa.me/201096409653
-    ?text=مرحبا%20أنا%20اسمي%20...%20وأريد%20فحص%20لمركبتي" target="_blank" rel="noopener">راسلنا على واتساب</a></label>
-  </form>
-
-</section>
-
-  </main>  <footer>
-    © جميع الحقوق محفوظة - ورشة صيانة المعدات الثقيلة • هذا الموقع نموذجي ويعرض معلومات وأسعار تقريبية.
+        <h2>3. تطبيق برنولي على جناح الطائرة (قوة الرفع)</h2>
+    <a href= https://share.google/Uz2EneWpY0UIKLeQG>بعض الصور </a>
+        <ul>
+            <li><strong>تصميم الجناح:</strong> مقطع الجناح (Airfoil) مصمم بحيث يجعل الهواء الذي يمر <strong>فوقه</strong> يقطع مسافة أطول ويسير <strong>أسرع</strong>.</li>
+            <li><strong>توليد الرفع:</strong>
+                <ol>
+                    <li><strong>سرعة عالية</strong> فوق الجناح ← <strong>ضغط منخفض</strong>.</li>
+                    <li><strong>سرعة أقل</strong> أسفل الجناح ← <strong>ضغط مرتفع</strong>.</li>
+                    <li>هذا <strong>الفرق في الضغط</strong> يولد <strong>قوة الرفع (Lift)</strong> التي ترفع الطائرة.</li>
+                          </main>  <footer>
+    © جميع الحقوق محفوظة -ziad _ shahin  • هذا الموقع نموذجي ويعرض معلومات .
   </footer>
+                </ol>
+            </li>
+        </ul>
+    </div>
+
 </body>
-</html>
+                                                                   </html>
+          
